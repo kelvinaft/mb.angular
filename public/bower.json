@@ -1,0 +1,22 @@
+{
+  "name": "lumx",
+  "version": "0.0.0",
+  "authors": [
+    "Kelvin Arnold <kaft.xz003@gmail.com>"
+  ],
+  "description": "demo lumx",
+  "keywords": [
+    "componets"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "lumx": "~0.3.27"
+  }
+}

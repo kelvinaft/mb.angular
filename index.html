@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="bower_components/mubox/css/mubox.css">
+	<link rel="stylesheet" href="bower_components/lumx/dist/lumx.css">
+	<link rel="stylesheet" href="bower_components/mdi/css/materialdesignicons.css">
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+	<title>Mubox</title>
+</head>
+<body data-ng-controller="appController">
+	<div class="tc-white-1 flex-mubox-100-v flex-mubox" flex-container="column" flex-align="space-between center">
+		<div class="tc-white-1 flex-mubox" flex-container="row">
+		    <div flex-item="2" flex-item-order="1">
+		    	<div class="p+ bgc-teal-900">
+		    		<a class="btn btn--menu btn--white btn--flat" lx-ripple href="#/home">
+				        <i class="icon icon--xs tc-white-1 icon--flat mdi mdi-menu"></i>
+				        Dashboard2
+				    </a>
+		    	</div>
+		    </div>
+		    <div flex-item="10" flex-item-order="2">
+		    	<div class="p+ bgc-teal-800 mbx-menu-h">
+		    		<div id="main">
+		    			MAIN CONTENT
+		    		</div>
+		    		<div id="user">
+		    			<lx-dropdown over-toggle="true">
+						    <button class="btn btn--menu btn--white btn--flat" lx-ripple lx-dropdown-toggle>
+						        <i class="icon icon--xs tc-white-1 icon--flat mdi mdi-chevron-down"></i>
+						        Kelvin Arnold
+						    </button>
+						    <lx-dropdown-menu>
+						        <ul>
+						            <li><a class="dropdown-link" ng-click="dropdownAlert()">Notification</a></li>
+						            <li><a class="dropdown-link">Perfil</a></li>
+						            <li><a class="dropdown-link" href="/">Cerrar session</a></li>
+						        </ul>
+						    </lx-dropdown-menu>
+						</lx-dropdown>
+		    		</div>
+		    	</div>
+		    </div>
+		</div>
+		<div class="tc-white-1 flex-mubox-100-v flex-mubox" flex-container="row">
+			<div flex-item="2" class="mbx-menu-v" id="mbx-menu-vertical">
+				<div class="flex-mubox">
+					<ul class="mbx-nav">
+						<li>
+							<a href="" class="p+ mbx-menu-module btn btn--white btn--flat" lx-ripple>Gestion<i class="icon icon--xs tc-white-1 icon--flat mdi mdi-chevron-down"></i></a>
+							<ul class="mbx-menu-items">
+								<li><a href="" class="p btn btn--white btn--flat" lx-ripple><i class="icon icon--xs tc-white-1 icon--flat mdi mdi-chevron-down"></i>subtitulo 1</a></li>
+								<li><a href="" class="p btn btn--white btn--flat" lx-ripple><i class="icon icon--xs tc-white-1 icon--flat mdi mdi-chevron-down"></i>subtitulo 2</a></li>
+								<li><a href="" class="p btn btn--white btn--flat" lx-ripple><i class="icon icon--xs tc-white-1 icon--flat mdi mdi-chevron-down"></i>subtitulo 3</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="" class="p+ mbx-menu-module btn btn--white btn--flat" lx-ripple>mantenimiento<i class="icon icon--xs tc-white-1 icon--flat mdi mdi-chevron-down"></i></a>
+							<ul class="mbx-menu-items">
+								<li><a href="" class="p btn btn--white btn--flat" lx-ripple><i class="icon icon--xs tc-white-1 icon--flat mdi mdi-chevron-down"></i>subtitulo 1</a></li>
+								<li><a href="" class="p btn btn--white btn--flat" lx-ripple><i class="icon icon--xs tc-white-1 icon--flat mdi mdi-chevron-down"></i>subtitulo 2</a></li>
+								<li><a href="" class="p btn btn--white btn--flat" lx-ripple><i class="icon icon--xs tc-white-1 icon--flat mdi mdi-chevron-down"></i>subtitulo 3</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="" class="p+ mbx-menu-module btn btn--white btn--flat" lx-ripple>mantenimiento<i class="icon icon--xs tc-white-1 icon--flat mdi mdi-chevron-down"></i></a>
+							<ul class="mbx-menu-items">
+								<li><a href="" class="p btn btn--white btn--flat" lx-ripple><i class="icon icon--xs tc-white-1 icon--flat mdi mdi-chevron-down"></i>subtitulo 1</a></li>
+								<li><a href="" class="p btn btn--white btn--flat" lx-ripple><i class="icon icon--xs tc-white-1 icon--flat mdi mdi-chevron-down"></i>subtitulo 2</a></li>
+								<li><a href="" class="p btn btn--white btn--flat" lx-ripple><i class="icon icon--xs tc-white-1 icon--flat mdi mdi-chevron-down"></i>subtitulo 3</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="" class="p+ mbx-menu-module btn btn--white btn--flat" lx-ripple>mantenimiento<i class="icon icon--xs tc-white-1 icon--flat mdi mdi-chevron-down"></i></a>
+							<ul class="mbx-menu-items">
+								<li ng-repeat="url in urls">
+									<a href="#/{{url.temp}}" data-ng-class="{activo:subseccion.isOpen}" class="p btn btn--white btn--flat" lx-ripple><i class="icon icon--xs tc-white-1 icon--flat mdi mdi-chevron-down"></i>{{url.desc}}</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div flex-item="10" class="mbx-dashboard">
+				<div class="p+" data-ng-view>
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="/data/config.js"></script>
+	<script type="text/javascript" src="/data/fn.js"></script>
+	<script type="text/javascript" src="/bower_components/jquery/dist/jquery.js"></script>
+	<script type="text/javascript" src="/bower_components/mubox/js/mubox.js"></script>
+	<script type="text/javascript" src="/bower_components/velocity/velocity.js"></script>
+	<script type="text/javascript" src="/bower_components/moment/min/moment-with-locales.js"></script>
+	<script type="text/javascript" src="/bower_components/angular/angular.js"></script>
+	<script type="text/javascript" src="/bower_components/angular/angular.min.js"></script>
+	<script type="text/javascript" src="/bower_components/angular/angular-resource.min.js"></script>
+	<script type="text/javascript" src="/bower_components/angular/angular-route.min.js"></script>
+	<script data-main="/main" src="/bower_components/mubox/js/require/require.js"></script>
+</body>
+</html>

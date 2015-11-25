@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Login system</title>
+	<link rel="stylesheet" href="bower_components/mubox/css/mubox.css">
+	<link rel="stylesheet" href="bower_components/lumx/dist/lumx.css">
+	<link rel="stylesheet" href="bower_components/mdi/css/materialdesignicons.css">
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+</head>
+<body ng-app="lumx">
+	<div class="header-login p">
+		<div class="title-special">
+			<a href="#/{{md.temp}}" class="p btn btn--teal btn--flat" lx-ripple>Mubox</a>
+		</div>
+		<ul>
+			<li><a href="#/{{md.temp}}" class="p btn btn--teal btn--flat" lx-ripple><i class="icon icon--xs tc-teal-1 icon--flat mdi mdi-facebook"></i>Facebook</a></li>
+			<li><a href="#/{{md.temp}}" class="p btn btn--teal btn--flat" lx-ripple><i class="icon icon--xs tc-teal-1 icon--flat mdi mdi-twitter"></i>Twitter</a></li>
+			<li><a href="#/{{md.temp}}" class="p btn btn--teal btn--flat" lx-ripple><i class="icon icon--xs tc-teal-1 icon--flat mdi mdi-blogger"></i>Support</a></li>
+		</ul>
+	</div>
+	<div class="login-container">
+		<div class="item login-body">
+			<div flex-container="row" flex-gutter="24">
+		        <div flex-item class="p++ form-login">
+		        	<div class="p++ title-special tc-teal-500">
+						<h1>Login</h1>
+					</div>
+					<div class="mt++">
+						<form method="get" action="/index">
+			                <lx-text-field label="User login" fixed-label="true" icon="account">
+			                    <input type="text" ng-model="textfield.account" name="account">
+			                </lx-text-field>
+
+			                <lx-text-field label="Passsword" fixed-label="true" icon="key">
+			                    <input type="password" ng-model="textfield.password" name="password">
+			                </lx-text-field>
+			                <div class="form-button">
+			                	<button class="mt++ btn btn--l btn--teal btn--raised" lx-ripple>Log in</button>
+			                </div>
+			            </form>
+					</div>
+		        </div>
+	        </div>
+		</div>
+	</div>
+	<!-- <div class="item login-news">
+		<div class="item mt++" flex-container="row" flex-gutter="24">
+	        <div flex-item>
+	        	<div class="title-special">Mubox</div>
+	        	<h5>Mubox es una organización fundada por un grupo de alumnos de la carrera de computación e informática, la cual se encuentra en continuo proceso de crecimiento basandose en las soluciones y servicios tecnológicos, de alta calidad, brindados al sector educativo.
+El éxito de nuestros clientes es nuestro éxito, y ayudar a mejorar su posición competitiva y hacer que ésta evolucione en el futuro es la finalidad principal de nuestro trabajo.
+Nuestra experiencia a nivel técnico es nuestro valor principal. Un dinámico y joven equipo de profesionales, con una sólida formación académica y avanzado perfil técnico, nos permite ser el socio tecnológico fiable que su empresa necesita.</h5>
+	        </div>
+		</div>
+	</div> -->
+	<script src="bower_components/jquery/dist/jquery.js"></script>
+	<script src="bower_components/velocity/velocity.js"></script>
+	<script src="bower_components/moment/min/moment-with-locales.js"></script>
+	<script src="bower_components/angular/angular.js"></script>
+	<script src="bower_components/lumx/dist/lumx.js"></script>
+</body>
+</html>
